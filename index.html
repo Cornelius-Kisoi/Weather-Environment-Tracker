@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Cast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div id="loader" class="loader-overlay" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+        <header>
+            <div class="search-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="location-display">
+                <h1 id="location">Detecting location....</h1>
+                <p id="date">Saturday, Jan 3</p>
+            </div>
+        </header>
+
+        <main class="current-weather">
+            <div class="temp-container">
+                <img src="" alt="Weather Icon" id="weather-icon" class="weather-icon">
+                <h2 id="temperature">--°C</h2>
+                <p id="description">Clear Sky</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p>Humidity</p>
+                    <span id="humidity">--%</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-wind"></i>
+                    <p>Wind Speed</p>
+                    <span id="wind-speed"> -- km/h</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-mask-face"></i>
+                    <p>Air Quality</p>
+                    <span id="aqi-level">Good</span>
+                </div>
+            </div>
+        </main>
+
+        <section class="forecast-section">
+            <h3>5-Day Temperature Trend</h3>
+            <div class="chart-container">
+                <canvas id="forecast-chart"></canvas>
+            </div>
+        </section>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
