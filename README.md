@@ -52,8 +52,7 @@ Browser Geolocation API
 📦 Project Structure
 ├── index.html
 ├── style.css
-├── script.js   // (contains the provided code)
-└── assets/
+├── script.js 
 
 🔑 API Setup
 
